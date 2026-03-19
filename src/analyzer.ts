@@ -5,7 +5,7 @@ import { BrandColor, buildBrandColor } from "./color-utils";
 export interface AnalyzeOptions {
   /** Number of brand colors to extract (default: 5) */
   maxColors?: number;
-  /** Downsample long edge to this size for performance (default: 150) */
+  /** Downsample long edge to this size for performance (default: 400) */
   resizeTo?: number;
 }
 
@@ -16,11 +16,12 @@ export async function analyzeImage(
   imageBuffer: Buffer,
   options: AnalyzeOptions = {}
 ): Promise<BrandColor[]> {
-  const { maxColors = 5, resizeTo = 150 } = options;
+  const { maxColors = 5, resizeTo = 400 } = options;
 
-  // Downscale for performance, convert to raw RGB
+  // Downscale for performance, using nearest-neighbor to preserve
+  // sharp color boundaries instead of blending them away
   const { data, info } = await sharp(imageBuffer)
-    .resize(resizeTo, resizeTo, { fit: "inside" })
+    .resize(resizeTo, resizeTo, { fit: "inside", kernel: "nearest" })
     .removeAlpha()
     .raw()
     .toBuffer({ resolveWithObject: true });

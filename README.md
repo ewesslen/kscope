@@ -68,45 +68,45 @@ Running the command above produces:
   "totalColors": 5,
   "colors": [
     {
-      "hex": "#010100",
-      "rgb": { "r": 1, "g": 1, "b": 0 },
-      "hsl": { "h": 60, "s": 100, "l": 0 },
+      "hex": "#000000",
+      "rgb": { "r": 0, "g": 0, "b": 0 },
+      "hsl": { "h": 0, "s": 0, "l": 0 },
       "name": "black",
-      "dominance": 85.9
+      "dominance": 91.4
     },
     {
-      "hex": "#cecece",
-      "rgb": { "r": 206, "g": 206, "b": 206 },
-      "hsl": { "h": 0, "s": 0, "l": 81 },
-      "name": "light gray",
-      "dominance": 5.5
+      "hex": "#fafafa",
+      "rgb": { "r": 250, "g": 250, "b": 250 },
+      "hsl": { "h": 0, "s": 0, "l": 98 },
+      "name": "white",
+      "dominance": 5.7
     },
     {
-      "hex": "#616f6b",
-      "rgb": { "r": 97, "g": 111, "b": 107 },
-      "hsl": { "h": 163, "s": 7, "l": 41 },
-      "name": "gray",
-      "dominance": 4.1
+      "hex": "#386736",
+      "rgb": { "r": 56, "g": 103, "b": 54 },
+      "hsl": { "h": 118, "s": 31, "l": 31 },
+      "name": "green",
+      "dominance": 1.3
     },
     {
-      "hex": "#2b2e28",
-      "rgb": { "r": 43, "g": 46, "b": 40 },
-      "hsl": { "h": 90, "s": 7, "l": 17 },
-      "name": "dark gray",
-      "dominance": 4
+      "hex": "#657c9f",
+      "rgb": { "r": 101, "g": 124, "b": 159 },
+      "hsl": { "h": 216, "s": 23, "l": 51 },
+      "name": "blue",
+      "dominance": 0.9
     },
     {
-      "hex": "#c3761d",
-      "rgb": { "r": 195, "g": 118, "b": 29 },
-      "hsl": { "h": 32, "s": 74, "l": 44 },
+      "hex": "#cf741f",
+      "rgb": { "r": 207, "g": 116, "b": 31 },
+      "hsl": { "h": 29, "s": 74, "l": 47 },
       "name": "orange",
-      "dominance": 0.6
+      "dominance": 0.7
     }
   ]
 }
 ```
 
-This tells us the logo is primarily **black** (85.9%), with **light gray/white text** (5.5%), and accent colors in the circular emblem.
+This tells us the logo is primarily **black** (91.4%) background with **white** text (5.7%), plus the **green**, **blue**, and **orange** accent colors from the circular emblem.
 
 ### Options
 
