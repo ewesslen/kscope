@@ -38,11 +38,21 @@ Keep this terminal window open — the server needs to stay running.
 
 ## Analyzing an Image
 
-Open a **second** terminal window and run the following command, replacing the path with the image you want to analyze:
+Open a **second** terminal window and run one of the following commands, depending on your system:
+
+**Mac / Linux:**
 
 ```bash
 curl -F "image=@examples/sport-shooting-depot.png" http://localhost:3000/analyze
 ```
+
+**Windows (PowerShell):**
+
+```powershell
+curl.exe -F "image=@examples/sport-shooting-depot.png" http://localhost:3000/analyze
+```
+
+> **Windows note:** PowerShell has a built-in `curl` that is not the same program. Use `curl.exe` (with the `.exe`) to run the real curl that ships with Windows 10+.
 
 ### Example
 
@@ -102,8 +112,16 @@ This tells us the logo is primarily **black** (85.9%), with **light gray/white t
 
 You can control how many colors are extracted by adding a `maxColors` field:
 
+**Mac / Linux:**
+
 ```bash
 curl -F "image=@examples/sport-shooting-depot.png" -F "maxColors=3" http://localhost:3000/analyze
+```
+
+**Windows (PowerShell):**
+
+```powershell
+curl.exe -F "image=@examples/sport-shooting-depot.png" -F "maxColors=3" http://localhost:3000/analyze
 ```
 
 ### Understanding the Output
